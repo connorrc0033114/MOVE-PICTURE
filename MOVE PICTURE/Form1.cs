@@ -22,7 +22,7 @@ namespace MOVE_PICTURE
 
         }
 
-          private async void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             pictureBox1.Location = new Point(pictureBox1.Location.X + 5, pictureBox1.Location.Y);
             await Task.Delay(500);
@@ -33,7 +33,7 @@ namespace MOVE_PICTURE
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -43,11 +43,33 @@ namespace MOVE_PICTURE
 
         private async void button3_Click(object sender, EventArgs e)
         {
-            for (int i=0; i<10; i++)
+            for (int i = 0; i < 10; i++)
             {
-                pictureBox1.Location = new Point(pictureBox1.Location.X+5, pictureBox1.Location.Y);
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 5, pictureBox1.Location.Y);
                 await Task.Delay(100);
             }
+            for (int i = 0; i < 10; i++)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - 5);
+                await Task.Delay(100);
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X - 5, pictureBox1.Location.Y);
+                await Task.Delay(100);
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 5);
+                await Task.Delay(100);
+            }
+
+
+
+
+
+
+
         }
     }
 }
